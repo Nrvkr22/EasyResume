@@ -34,15 +34,13 @@ A simple, fast, and free online resume builder. Create a professional resume in 
 
 ---
 
-## Project Structure
+## Files
 
-EasyResume/
-├── index.html      - Home page
-├── builder.html    - Form to enter resume data
-├── preview.html    - Live resume preview + PDF download
-├── style.css       - Styles + dark mode
-├── script.js       - Form logic, save, load, PDF
-└── README.md       - This file
+- `index.html` — Home page
+- `builder.html` — Form to enter resume data  
+- `preview.html` — Live resume preview + PDF downloads  
+- `style.css` — Styles + dark mode  
+- `script.js` — Form logic, save, load, PDF
 
 ---
 
