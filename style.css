@@ -1,0 +1,66 @@
+/* Dark Mode - Background & Text*/
+body.dark-mode {
+  background-color: #2b2b2b !important;
+  color: #eaeaea !important;
+}
+
+/* Dark Mode - Card Background */
+body.dark-mode .card {
+  background-color: #3a3a3a !important;
+  color: #eaeaea !important;
+}
+
+/* Dark Mode - Form Inputs */
+body.dark-mode .form-control {
+  background-color: #4a4a4a;
+  color: #ffffff;
+  border: 1px solid #666;
+}
+
+/* Dark Mode - Light Button Outline */
+body.dark-mode .btn-outline-light {
+  border-color: #ccc;
+}
+
+/* Active Nav Link */
+.navbar-dark .navbar-nav .nav-link.active {
+  text-decoration: bold;
+}
+
+/* Placeholder Text Color - Light Mode */
+.form-control::placeholder {
+  color: #666;
+}
+
+/* Placeholder Text Color - Dark Mode */
+body.dark-mode .form-control::placeholder {
+  color: #bbbbbb;
+}
+
+/* Preview Title (Designation) - Muted Color */
+#previewTitle {
+  color: #ffffff !important; 
+}
+
+/* Hide Download Button in PDF */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Simple Footer Styling */
+footer {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+/* Dark Mode Footer */
+body.dark-mode footer {
+  background-color: #2b2b2b;
+  color: #bbbbbb;
+  border-top: 1px solid #444;
+}
