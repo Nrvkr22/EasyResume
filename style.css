@@ -1,66 +1,50 @@
-/* Dark Mode - Background & Text*/
-body.dark-mode {
-  background-color: #2b2b2b !important;
-  color: #eaeaea !important;
+/* Resume Sheet */
+.resume-sheet {
+  background: #ffffff;
+  color: #000;
+  max-width: 794px; /* A4 width */
+  margin: auto;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* Dark Mode - Card Background */
-body.dark-mode .card {
-  background-color: #3a3a3a !important;
-  color: #eaeaea !important;
+/* Header */
+.resume-header h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
 }
 
-/* Dark Mode - Form Inputs */
-body.dark-mode .form-control {
-  background-color: #4a4a4a;
-  color: #ffffff;
-  border: 1px solid #666;
+.resume-header h5 {
+  font-weight: 500;
+  color: #555;
 }
 
-/* Dark Mode - Light Button Outline */
-body.dark-mode .btn-outline-light {
-  border-color: #ccc;
+/* Sections */
+section {
+  margin-top: 25px;
 }
 
-/* Active Nav Link */
-.navbar-dark .navbar-nav .nav-link.active {
-  text-decoration: bold;
+section h4 {
+  font-size: 18px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
-/* Placeholder Text Color - Light Mode */
-.form-control::placeholder {
-  color: #666;
+/* Education & Experience */
+#previewEducation div,
+#previewExperience div {
+  margin-bottom: 8px;
 }
 
-/* Placeholder Text Color - Dark Mode */
-body.dark-mode .form-control::placeholder {
-  color: #bbbbbb;
-}
-
-/* Preview Title (Designation) - Muted Color */
-#previewTitle {
-  color: #ffffff !important; 
-}
-
-/* Hide Download Button in PDF */
+/* Hide UI elements in PDF */
 @media print {
   .no-print {
     display: none !important;
   }
-}
 
-/* Simple Footer Styling */
-footer {
-  background-color: #f8f9fa;
-  color: #6c757d;
-  font-size: 0.9rem;
-  padding: 1rem 0;
-  margin-top: 3rem;
-}
-
-/* Dark Mode Footer */
-body.dark-mode footer {
-  background-color: #2b2b2b;
-  color: #bbbbbb;
-  border-top: 1px solid #444;
+  body {
+    background: white;
+  }
 }
