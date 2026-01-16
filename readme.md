@@ -1,4 +1,4 @@
-## EasyResume
+EasyResume
 
 A simple, fast, and free online resume builder. Create a professional resume in minutes and download it as a PDF.
 
