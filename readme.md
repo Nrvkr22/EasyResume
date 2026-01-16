@@ -44,6 +44,11 @@ A simple, fast, and free online resume builder. Create a professional resume in 
 
 ---
 
+## Live link 
+https://nrvkr22.github.io/EasyResume/
+
+---
+
 ## Local Development
 
 1. Clone or download the project
