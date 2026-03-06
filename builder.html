@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Build Resume</title>
+  <title>Build Resume — EasyResume</title>
+  <meta name="description" content="Enter your details to build a professional resume. Add education, experience, skills and more.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <nav class="navbar navbar-expand-lg navbar-dark px-3">
     <a class="navbar-brand" href="index.html">EasyResume</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -26,76 +27,77 @@
   </nav>
 
   <!-- Form -->
-  <div class="container my-5">
-    <div class="card shadow p-4">
-      <h2 class="text-center mb-4">Enter Your Details</h2>
+  <div class="container my-5 fade-in" style="max-width: 780px;">
+    <div class="glass-card">
+      <h2 class="text-center mb-1" style="font-weight:700;">Enter Your Details</h2>
+      <p class="text-center mb-4" style="color:#9ca3af; font-size:0.92rem;">Fill in the sections below to craft your resume</p>
       
       <form id="resumeForm">
-        <h4 class="text-primary mb-3">Personal Information</h4>
+        <!-- Personal Information -->
+        <h4 class="section-title">Personal Information</h4>
         <div class="row mb-3">
-                   
-          <div class="col-md-6">
+          <div class="col-md-6 mb-2">
             <label class="form-label">Full Name</label>
-            <input type="text" id="fullName" class="form-control" required>
+            <input type="text" id="fullName" class="form-control" placeholder="John Doe" required>
           </div>
-
-          <div class="col-md-6">
+          <div class="col-md-6 mb-2">
             <label class="form-label">Designation</label>
             <input type="text" id="designation" class="form-control" placeholder="Software Developer">
           </div>
         </div>
-
         <div class="row mb-3">
-          <div class="col-md-6">
+          <div class="col-md-6 mb-2">
             <label class="form-label">Email</label>
-            <input type="email" id="email" class="form-control">
+            <input type="email" id="email" class="form-control" placeholder="john@example.com">
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 mb-2">
             <label class="form-label">Phone</label>
-            <input type="text" id="phone" class="form-control">
+            <input type="text" id="phone" class="form-control" placeholder="+1 234 567 8900">
           </div>
         </div>
-
-        <div class="mb-3">
-          <label class="form-label">Summary</label>
-          <textarea id="summary" class="form-control" rows="3"></textarea>
+        <div class="mb-4">
+          <label class="form-label">Professional Summary</label>
+          <textarea id="summary" class="form-control" rows="3" placeholder="A brief summary of your professional background and goals..."></textarea>
         </div>
 
-        <h4 class="text-primary mb-3">Skills</h4>
-        <textarea id="skills" class="form-control mb-3" rows="2" placeholder="e.g., HTML, CSS, JavaScript"></textarea>
+        <!-- Skills -->
+        <h4 class="section-title">Skills</h4>
+        <textarea id="skills" class="form-control mb-4" rows="2" placeholder="e.g., HTML, CSS, JavaScript, Python, React"></textarea>
 
-        <h4 class="text-primary mb-3">Education</h4>   
+        <!-- Education -->
+        <h4 class="section-title">Education</h4>
         <div id="educationSection">
-          <div class="edu-item mb-3 p-3 border rounded">
-            <input type="text" class="form-control mb-2 edu-degree" placeholder="Degree (e.g., B.Tech in Computer Science)" >
+          <div class="entry-block edu-item">
+            <input type="text" class="form-control mb-2 edu-degree" placeholder="Degree (e.g., B.Tech in Computer Science)">
             <input type="text" class="form-control mb-2 edu-institute" placeholder="Institution">
-            <input type="text" class="form-control mb-2 edu-year" placeholder="Year (e.g., 2022) ">
+            <input type="text" class="form-control edu-year" placeholder="Year (e.g., 2022)">
           </div>
         </div>
-        <button type="button" class="btn btn-outline-primary mb-3" id="addEducation">+ Add Education</button>
+        <button type="button" class="btn btn-add mb-4" id="addEducation">+ Add Education</button>
 
-        <h4 class="text-primary mb-3">Experience</h4>
+        <!-- Experience -->
+        <h4 class="section-title">Experience</h4>
         <div id="experienceSection">
-          <div class="exp-item mb-3 p-3 border rounded">
+          <div class="entry-block exp-item">
             <input type="text" class="form-control mb-2 exp-title" placeholder="Job Title">
             <input type="text" class="form-control mb-2 exp-company" placeholder="Company">
-            <input type="text" class="form-control mb-2 exp-duration" placeholder="Duration (e.g., 2021–2023)">
-            <textarea class="form-control exp-desc" rows="2" placeholder="Description"></textarea>
+            <input type="text" class="form-control mb-2 exp-duration" placeholder="Duration (e.g., 2021 – 2023)">
+            <textarea class="form-control exp-desc" rows="2" placeholder="Brief description of your role and achievements"></textarea>
           </div>
         </div>
-        <button type="button" class="btn btn-outline-primary mb-3" id="addExperience">+ Add Experience</button>
+        <button type="button" class="btn btn-add mb-4" id="addExperience">+ Add Experience</button>
 
         <div class="text-end">
-          <button type="button" class="btn btn-success" id="saveResume">Save & Preview</button>
+          <button type="button" class="btn btn-save" id="saveResume">Save & Preview →</button>
         </div>
       </form>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="text-center">
+  <footer>
     <div class="container">
-      <p class="mb-0">© 2025 Resume Builder. All rights reserved.</p>
+      <p class="mb-0">© 2025 EasyResume. All rights reserved.</p>
     </div>
   </footer>
 

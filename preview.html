@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Preview Resume</title>
+  <title>Preview Resume — EasyResume</title>
+  <meta name="description" content="Preview your resume and download it as a professionally formatted PDF.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+  <nav class="navbar navbar-expand-lg navbar-dark px-3">
     <a class="navbar-brand" href="index.html">EasyResume</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -25,37 +26,60 @@
     </div>
   </nav>
 
-  <!-- Resume Preview Section-->
-  <div class="container my-5" id="resumePreview">
-    <div class="card shadow p-4">
-      <h2 id="previewName" class="text-center"></h2>
-      <p class="text-center text-muted" id="previewTitle"></p>
-      <p class="text-center"><strong>Email:</strong> <span id="previewEmail"></span> |
-      <strong>Phone:</strong> <span id="previewPhone"></span></p>
-      <hr>
+  <!-- Action Buttons -->
+  <div class="container mt-4 fade-in" data-html2canvas-ignore>
+    <div class="preview-actions">
+      <button class="btn-edit" id="editResume">← Edit Resume</button>
+      <button class="btn-download" id="downloadPDF">⬇ Download PDF</button>
+    </div>
+  </div>
 
-      <h4 class="text-primary">Professional Summary</h4>
-      <p id="previewSummary"></p>
+  <!-- Resume Output (this is the PDF source) -->
+  <div class="container mb-5 fade-in" style="animation-delay:0.1s">
+    <div id="resumeOutput">
+      <!-- Header -->
+      <div class="resume-header">
+        <h1 id="previewName"></h1>
+        <div class="designation" id="previewTitle"></div>
+        <div class="resume-contact">
+          <span id="contactEmail"></span>
+          <span id="contactPhone"></span>
+        </div>
+      </div>
 
-      <h4 class="text-primary">Skills</h4>
-      <p id="previewSkills"></p>
+      <!-- Body -->
+      <div class="resume-body">
+        <!-- Summary -->
+        <div class="resume-section" id="sectionSummary">
+          <div class="resume-section-title">Professional Summary</div>
+          <p class="resume-summary" id="previewSummary"></p>
+        </div>
 
-      <h4 class="text-primary">Education</h4>
-      <p id="previewEducation"></p>
+        <!-- Skills -->
+        <div class="resume-section" id="sectionSkills">
+          <div class="resume-section-title">Skills</div>
+          <div class="resume-skills" id="previewSkills"></div>
+        </div>
 
-      <h4 class="text-primary">Experience</h4>
-      <p id="previewExperience"></p>
+        <!-- Education -->
+        <div class="resume-section" id="sectionEducation">
+          <div class="resume-section-title">Education</div>
+          <div id="previewEducation"></div>
+        </div>
 
-      <div class="text-center mt-4">
-      <button class="btn btn-primary" id="downloadPDF" data-html2canvas-ignore>Download PDF</button>
+        <!-- Experience -->
+        <div class="resume-section" id="sectionExperience">
+          <div class="resume-section-title">Experience</div>
+          <div id="previewExperience"></div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="text-center">
+  <footer>
     <div class="container">
-      <p class="mb-0">© 2025 Resume Builder. All rights reserved.</p>
+      <p class="mb-0">© 2025 EasyResume. All rights reserved.</p>
     </div>
   </footer>
 
